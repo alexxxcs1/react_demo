@@ -1,0 +1,85 @@
+
+.NotFoundBox
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(rgb(212, 216, 192), $alpha: 0.5);
+    position: fixed;
+
+        
+    .NotFoundTips
+    {
+        width: 100%;
+        padding: 50px;
+        $NotFoundTipsHeight:300px;
+        // line-height: $NotFoundTipsHeight;
+        height: auto;
+        text-align: center;
+
+        background-color: rgba(rgb(212, 216, 192), $alpha: 1);
+
+        font-size: 80px;
+        color: #ffffff;
+
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        // animation: rotate_text 2s infinite ;
+        p
+        {
+            animation: slideInLeft 0.5s;
+            &::after
+            {
+                content: '404 NOT FOUND';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%) rotateZ(30deg);
+                font-size: 82px;
+                z-index: -1;
+                color: #333333;
+                animation: rotate_text 1s infinite;
+            }
+        }
+    }
+}
+@keyframes animate_bg {
+    0% {
+        background-position: 0%, 50%;
+    }
+
+    50% {
+        background-position: 100%, 50%;
+    }
+
+    100% {
+        background-position: 0%, 50%;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes rotate_text {
+    0% {
+        transform:translateX(-50%) translateY(-50%) rotateZ(0deg);
+        text-shadow: #333333 0px 0px 0px;
+    }
+    100%{
+        transform:translateX(-50%) translateY(-50%) rotateZ(360deg);
+        text-shadow: #333333 0px 0px 50px;
+    }
+}
+
+
+
