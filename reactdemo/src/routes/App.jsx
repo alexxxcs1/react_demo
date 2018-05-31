@@ -10,9 +10,14 @@ import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 import store from '../redux/store';
 
+//route
 import NotFound from './notFound'
 
 import Home from './Home'
+
+//component
+import AnimateBackground from '../components/AnimateBackground'
+
 
 // import 'common/flexible'
 import FastClick from 'fastclick'
@@ -21,9 +26,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pageonload:false,
     };
   }
   componentDidMount () {
+
     // 初始化快速点击
     if ('addEventListener' in document) {
       document.addEventListener('DOMContentLoaded', function () {
@@ -53,15 +60,14 @@ class App extends React.Component {
         }
         return format;
     }
-
+    
+    
   }
 
-  shouldComponentUpdate () {
-    return false
-  }
 
   render () {
     return (
+      <div>
         <Router history={hashHistory} basename="/product/dist">
           {/* 首页 */}
           <Route path='/' component={Home} > 
@@ -71,6 +77,9 @@ class App extends React.Component {
           <Route path="*" component={NotFound}/> 
 
         </Router>
+        <AnimateBackground />
+      </div>
+      
     )
   }
 }
