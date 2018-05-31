@@ -22,7 +22,15 @@ export class Home extends Component {
         <ProgressBanner loaded={this.state.pageonload} />
         
         <div className={style.HomeBox}>
-            HELLWORLD
+            <span>H</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>W</span>
+            <span>O</span>
+            <span>R</span>
+            <span>L</span>
+            <span>D</span>
         </div>
 
       </div>
