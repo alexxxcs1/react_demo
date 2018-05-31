@@ -24,10 +24,11 @@
 
     letter-spacing:50px;
 
+    --randomtime:0.3s;
 
     span
-    {
-        animation: slideInUp calc(0.3s * var(--n)) forwards;
+    {   
+        animation: slideInUp calc(var(--randomtime) * var(--n)) forwards;
     }
 
     span:nth-child(1)
