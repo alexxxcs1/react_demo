@@ -13,7 +13,7 @@
 
     color: #FFF;
 
-    font-size: 100px;
+    
 
     
     display: flex;
@@ -22,13 +22,19 @@
     align-items: center;
     flex-wrap: nowrap;
 
-    letter-spacing:50px;
-
     --randomtime:0.3s;
 
     span
     {   
+        margin: 0 20px;
+        transition: 0.5s;
         animation: slideInUp calc(var(--randomtime) * var(--n)) forwards;
+        font-size: 100px;
+        &:hover
+        {
+            
+            text-shadow:#fff 0 0 50px;
+        }
     }
 
     span:nth-child(1)
@@ -73,12 +79,14 @@
         opacity: 0;
         -webkit-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
-        visibility: visible
+        visibility: visible;
+        filter: blur(100px);
     }
     to {
         opacity: 1;
         -webkit-transform: translateZ(0);
-        transform: translateZ(0)
+        transform: translateZ(0);
+        filter: blur(0.5px);
     }
 }
 
@@ -87,12 +95,14 @@
         opacity: 0;
         -webkit-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
-        visibility: visible
+        visibility: visible;
+        filter: blur(100px);
     }
     to {
         opacity: 1;
         -webkit-transform: translateZ(0);
-        transform: translateZ(0)
+        transform: translateZ(0);
+        filter: blur(0.5px);
     }
 }
 
@@ -101,12 +111,14 @@
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
-        visibility: visible
+        visibility: visible;
+        filter: blur(100px);
     }
     to {
         opacity: 1;
         -webkit-transform: translateZ(0);
-        transform: translateZ(0)
+        transform: translateZ(0);
+        filter: blur(0.5px);
     }
 }
 
@@ -115,11 +127,32 @@
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
-        visibility: visible
+        visibility: visible;
+        filter: blur(100px);
     }
     to {
         opacity: 1;
         -webkit-transform: translateZ(0);
-        transform: translateZ(0)
+        transform: translateZ(0);
+        filter: blur(0.5px);
     }
 }
+
+@media screen and (max-width: 450px) {
+    .HomeBox {
+        span
+        {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .HomeBox {
+        span
+        {
+            font-size: 50px;
+        }
+    }
+}
+
