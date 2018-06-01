@@ -4,7 +4,7 @@ import style from './AnimateBackground.scss'
 export class AnimateBackground extends Component {
   componentDidMount()
   {
-    this.refs.Box.style.setProperty('--randomtime', (Math.random()*10 + 10) +'s');
+    this.refs.Box.style.setProperty('--randomtime', (Math.random()*10) +'s');
   }
   render() {
     return (

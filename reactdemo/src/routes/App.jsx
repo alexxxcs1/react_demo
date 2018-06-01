@@ -67,7 +67,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>
+      <div style={{height:'100%'}}>
         <Router history={hashHistory}>
           {/* 首页 */}
           <Route path='/' component={Home} > 

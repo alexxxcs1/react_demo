@@ -34,7 +34,6 @@
     height: 100%;
     clip-path: polygon(57% 0, 75% 0, 26% 85%, 89.5% 85%, 98.4% 100%, 0 100%);
     background-color: currentColor;
-    
     /* animation: tween 0.5s infinite; */
 }
 .Box span:nth-child(1)
@@ -92,15 +91,15 @@
     }
 
     60% {
-        color: #ffffff;
-    }
-
-    80% {
         color: #333333;
     }
 
-    100% {
+    80% {
         color: #ffffff;
+    }
+
+    100% {
+        color: #333333;
         transform: rotate(720deg);
     }
 }
