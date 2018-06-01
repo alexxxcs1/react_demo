@@ -13,9 +13,14 @@ export class Home extends Component {
   componentDidMount()
   {
     this.refs.homebox.style.setProperty('--randomtime', (Math.random()+0.1) +'s');
-    this.setState({
-      pageonload:true,
-    })
+    
+    setTimeout(() => {
+      this.setState({
+        pageonload:true,
+      })
+    }, 3000);
+    
+    
   }
   render() {
     return (

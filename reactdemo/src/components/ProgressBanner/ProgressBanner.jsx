@@ -14,14 +14,12 @@ export class ProgressBanner extends Component {
   }
   componentWillReceiveProps(nextprop)
   {
-    console.log('props',nextprop.loaded);
     this.setState({
         loaded:nextprop.loaded,
     })
   }
   componentDidMount()
   {
-    console.log('prop',this.props.loaded);
     this.setState({
         loaded:this.props.loaded,
     })
@@ -32,27 +30,23 @@ export class ProgressBanner extends Component {
         // console.log(this.state.loaded);
         if (this.state.loaded) {
             this.setState({prog : 100});
+            var self = this;
             setTimeout(() => {
-                this.setState({
+                self.setState({
                     animatover:true,
                 })
             }, 500);
             clearInterval(this.state.intervalReflash);
-            
         }else
         {
             if (this.state.prog<90) {
                 this.setState({
                     prog:this.state.prog+Math.random() * 10
                 })
-                
-            }else
-            {
-                
             }
             
         }
-    },500)
+    },100)
   }
   refresh(steep)
   {

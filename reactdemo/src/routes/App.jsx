@@ -68,7 +68,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Router history={hashHistory} basename="/product/dist">
+        <Router history={hashHistory}>
           {/* 首页 */}
           <Route path='/' component={Home} > 
             {/* <Route path="/login" component={Login}/> */}
