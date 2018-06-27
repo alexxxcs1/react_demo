@@ -19,8 +19,7 @@ import Home from './Home'
 import AnimateBackground from '../components/AnimateBackground'
 
 
-// import 'common/flexible'
-import FastClick from 'fastclick'
+import 'common/flexible'
 
 class App extends React.Component {
   constructor(props) {
@@ -30,13 +29,6 @@ class App extends React.Component {
     };
   }
   componentDidMount () {
-
-    // 初始化快速点击
-    if ('addEventListener' in document) {
-      document.addEventListener('DOMContentLoaded', function () {
-        FastClick.attach(document.body)
-      }, false)
-    }
     //初始化时间转换
     Date.prototype.format = function(format) {
 
